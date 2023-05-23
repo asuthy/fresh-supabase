@@ -12,10 +12,8 @@ export const handler: Handlers = {
 export default function Secret(props: PageProps<ServerState>) {
   return (
     <Layout state={props.data}>
-      <div class="flex flex-col items-center">
-        <h2>Congrats, You've reached the secret page!</h2>
-        <p>Here's a little treat:</p>
-        <p class="text-[72px] text-align-center">🍋</p>
+      <div class="flex flex-col items-center pt-10 text-gray-500">
+        <h3>You've reached the secret page!</h3>
       </div>
     </Layout>
   );

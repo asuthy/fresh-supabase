@@ -19,19 +19,14 @@ export function Layout(props: Props) {
   return (
     <>
       <Head>
-        <title>Supa Fresh Auth</title>
+        <title>Copyfuse</title>
       </Head>
 
       <div class="bg-primary">
-        <nav class="flex items-center justify-between flex-wrap min-h-[80px] max-w-screen-md mx-auto p-4">
+        <nav class="flex items-center justify-between flex-wrap min-h-[60px] max-w-screen-md mx-auto">
           <a href="/">
             <div class="flex flex-shrink-0 border-white">
-              <img
-                src="/logo.svg"
-                class="w-8 h-8"
-                alt="the fresh logo: a sliced lemon dripping with juice"
-              />
-              <h1 class="ml-2 text-white">Supa Fresh Auth</h1>
+              <h1 class="ml-2 text-white">Copyfuse</h1>
             </div>
           </a>
 
@@ -40,7 +35,7 @@ export function Layout(props: Props) {
               <NavLink href="/secret">Secret</NavLink>
             </div>
             <div class="flex sm:flex-shrink-0">
-              <NavLink href="/sign-up">Create account</NavLink>
+              { !isAllowed ? (<NavLink class="!text-white" href="/sign-up">Register</NavLink>) : (<div/>) }
               <NavButton href={buttProps.href}>{buttProps.text}</NavButton>
             </div>
           </div>

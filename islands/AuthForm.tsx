@@ -12,7 +12,7 @@ export default function AuthForm({ mode }: Props) {
   };
 
   const signUp = {
-    title: "Create account",
+    title: "Register",
     href: "/sign-up",
     text: "No account?",
   };
@@ -22,11 +22,7 @@ export default function AuthForm({ mode }: Props) {
 
   return (
     <div class="items-stretch min-w-0">
-      <div class="flex justify-center">
-        <h2 class="my-4">{buttProps.title}</h2>
-      </div>
-
-      <form method="post" class="flex flex-col space-y-4 min-w-0">
+      <form method="post" class="flex flex-col space-y-4 min-w-0 pt-10">
         <Input
           autofocus
           type="email"
@@ -45,7 +41,7 @@ export default function AuthForm({ mode }: Props) {
           {buttProps.title}
         </FormButton>
 
-        <p>
+        <p class="pt-8 text-gray-500">
           {footProps.text} <Link href={footProps.href}>{footProps.title}</Link>
         </p>
       </form>
