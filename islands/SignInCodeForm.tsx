@@ -6,16 +6,16 @@ export default function AuthForm() {
       <form method="post" class="flex flex-col space-y-4 min-w-0 pt-10">
         <Input
           autofocus
-          type="email"
-          name="email"
+          type="text"
+          name="Confirmation Code"
         />
 
         <FormButton
           type="submit"
-          formAction="/api/sign-in"
+          formAction="/api/sign-in-code"
           class="!mt-8"
         >
-          Send
+          Sign In
         </FormButton>
       </form>
     </div>

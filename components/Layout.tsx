@@ -35,7 +35,6 @@ export function Layout(props: Props) {
               <NavLink href="/secret">Secret</NavLink>
             </div>
             <div class="flex sm:flex-shrink-0">
-              { !isAllowed ? (<NavLink class="!text-white" href="/sign-up">Register</NavLink>) : (<div/>) }
               <NavButton href={buttProps.href}>{buttProps.text}</NavButton>
             </div>
           </div>

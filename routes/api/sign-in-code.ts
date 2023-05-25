@@ -1,5 +1,5 @@
 import { Handlers } from "$fresh/server.ts";
-import { setCookie } from "std/http/cookie.ts";
+import { deleteCookie, getCookies, setCookie } from "std/http/cookie.ts";
 
 import { supabase } from "lib/supabase.ts";
 
@@ -8,25 +8,33 @@ export const handler: Handlers = {
     const url = new URL(req.url);
     const form = await req.formData();
 
+    const cookies = getCookies(req.headers);
+    const email = cookies.authEmail;
+
     const headers = new Headers();
-    headers.set("location", "/sign-in-code");
+    headers.set("location", "/");
 
-    const email = String(form.get("email"));
+    const confirmationCode = String(form.get("Confirmation Code"));
 
-    const { error } = await supabase.auth
-      .signInWithOtp({
+    const { data: { user, session }, error } = await supabase.auth
+      .verifyOtp({
+        type: "magiclink",
         email,
+        token: confirmationCode,
       });
 
-    if (error != null) {
+    if (error != null || user == null || session == null) {
       // TODO: Add some actual error handling. Differentiate between 500 & 403.
       console.log(error);
       return new Response(null, { status: 500 });
     }
 
+    deleteCookie(headers, "authEmail", { path: "/", domain: url.hostname });
+
     setCookie(headers, {
-      name: "authEmail",
-      value: email,
+      name: "auth",
+      value: session.access_token,
+      maxAge: session.expires_in,
       sameSite: "Lax",
       domain: url.hostname,
       path: "/",
