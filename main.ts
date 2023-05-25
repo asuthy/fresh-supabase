@@ -16,8 +16,7 @@ import { redis } from "lib/redis.ts";
 supabase.auth.onAuthStateChange(async (event, session) => {
   if (event == "SIGNED_IN" || event == "TOKEN_REFRESHED" && session != null) {
     const { access_token, expires_in } = session!;
-    const stringified = JSON.stringify(session);
-    await redis.set(access_token, stringified, { ex: expires_in });
+    await redis.set(access_token, session, { ex: expires_in });
   }
 });
 

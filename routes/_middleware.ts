@@ -9,6 +9,10 @@ export type ServerState = {
   error: { code: number; msg: string } | null;
 };
 
+interface Session {
+  user: User | null;
+}
+
 export async function handler(
   req: Request,
   ctx: MiddlewareHandlerContext<ServerState>,
@@ -28,13 +32,13 @@ export async function handler(
   }
 
   if (access_token) {
-    const session = await redis.get(access_token);
+    const session = await redis.get(access_token) as Session;
 
     if (protected_route && !session) {
       return new Response(null, { headers, status: 303 });
     }
 
-    const user = JSON.parse(session!.toString())?.user;
+    const user = session?.user;
     ctx.state.user = user;
   }
 
