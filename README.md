@@ -8,10 +8,8 @@ Create a `.env` file with the following variables:
 SUPABASE_URL=https://<projectName>.supabase.co
 SUPABASE_KEY=<api_key>
 
-REDIS_USER=
-REDIS_PASSWORD=
-REDIS_HOSTNAME=
-REDIS_PORT=
+REDIS_URL=
+REDIS_TOKEN=
 ```
 
 Run the app:
