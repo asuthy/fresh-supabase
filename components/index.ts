@@ -5,3 +5,5 @@ export { Input } from "components/Input.tsx";
 export { Layout } from "components/Layout.tsx";
 export { Link } from "components/Link.tsx";
 export { NavLink } from "components/NavLink.tsx";
+export { LinkButton } from "components/LinkButton.tsx";
+export { Popup } from "components/Popup.tsx";

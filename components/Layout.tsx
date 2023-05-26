@@ -2,7 +2,10 @@ import { Head } from "$fresh/runtime.ts";
 import { ComponentChildren } from "preact";
 
 import { ServerState } from "routes/_middleware.ts";
-import { NavButton, NavLink } from "components/index.ts";
+import { LinkButton, NavButton, NavLink, Popup } from "components/index.ts";
+import IconUserCircle from "https://deno.land/x/tabler_icons_tsx@0.0.3/tsx/user-circle.tsx";
+import SignInDialog from "../islands/SignInDialog.tsx";
+import SignInButton from "../islands/SignInButton.tsx";
 
 type Props = {
   children: ComponentChildren;
@@ -19,14 +22,16 @@ export function Layout(props: Props) {
   return (
     <>
       <Head>
-        <title>Copyfuse</title>
+        <title>copyfuse</title>
       </Head>
 
-      <div class="bg-primary">
+      <div class="bg-primary shadow-md">
         <nav class="flex items-center justify-between flex-wrap min-h-[60px] max-w-screen-md mx-auto">
           <a href="/">
             <div class="flex flex-shrink-0 border-white">
-              <h1 class="ml-2 text-white">Copyfuse</h1>
+              <p class="ml-2 text-white text-3xl">
+                copy<b>fuse</b>
+              </p>
             </div>
           </a>
 
@@ -35,13 +40,14 @@ export function Layout(props: Props) {
               <NavLink href="/secret">Secret</NavLink>
             </div>
             <div class="flex sm:flex-shrink-0">
-              <NavButton href={buttProps.href}>{buttProps.text}</NavButton>
+              <SignInButton text={buttProps.text} />
             </div>
           </div>
         </nav>
       </div>
 
       <div class="mx-auto max-w-screen-md p-4">
+        <SignInDialog show={false} />
         {props.children}
       </div>
     </>
