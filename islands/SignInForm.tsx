@@ -1,7 +1,7 @@
 import { useState } from "preact/hooks";
 import { FormButton, InputEmail } from "components/index.ts";
 
-export default function AuthForm() {
+export default function SignInForm() {
   const [valid, setValid] = useState(false);
 
   const onValidChange = function (valid: boolean) {

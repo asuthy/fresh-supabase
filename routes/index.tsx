@@ -21,10 +21,6 @@ export default function Home(props: PageProps<ServerState>) {
         and <Link href="https://redis.io/" target="_blank">Redis</Link>{" "}
         implementing a simple cookie-based authentication scheme.
       </p>
-
-      {!isAllowed
-        ? <Link href="/sign-in">Sign In</Link>
-        : <Link href="/api/sign-out">Sign Out</Link>}
     </Layout>
   );
 }

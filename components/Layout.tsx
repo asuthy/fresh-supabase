@@ -2,10 +2,11 @@ import { Head } from "$fresh/runtime.ts";
 import { ComponentChildren } from "preact";
 
 import { ServerState } from "routes/_middleware.ts";
-import { LinkButton, NavButton, NavLink, Popup } from "components/index.ts";
-import IconUserCircle from "https://deno.land/x/tabler_icons_tsx@0.0.3/tsx/user-circle.tsx";
+import { NavLink } from "components/index.ts";
 import SignInDialog from "../islands/SignInDialog.tsx";
 import SignInButton from "../islands/SignInButton.tsx";
+import IconUserCircle from "https://deno.land/x/tabler_icons_tsx@0.0.3/tsx/user-circle.tsx";
+import { LinkButton } from "components/index.ts";
 
 type Props = {
   children: ComponentChildren;
@@ -40,14 +41,21 @@ export function Layout(props: Props) {
               <NavLink href="/secret">Secret</NavLink>
             </div>
             <div class="flex sm:flex-shrink-0">
-              <SignInButton text={buttProps.text} />
+              {!isAllowed
+                ? <SignInButton text={buttProps.text} />
+                : (
+                  <LinkButton href={buttProps.href}>
+                    <IconUserCircle class="text-white" />
+                    {buttProps.text}
+                  </LinkButton>
+                )}
             </div>
           </div>
         </nav>
       </div>
 
       <div class="mx-auto max-w-screen-md p-4">
-        <SignInDialog show={false} />
+        <SignInDialog />
         {props.children}
       </div>
     </>
