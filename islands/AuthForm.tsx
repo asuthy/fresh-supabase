@@ -4,7 +4,10 @@ import { FormButton, InputEmail } from "components/index.ts";
 export default function AuthForm() {
   const [valid, setValid] = useState(false);
 
-  const on;
+  const onValidChange = function (valid: boolean) {
+    setValid(valid);
+    return valid;
+  };
 
   return (
     <div class="items-stretch min-w-0">

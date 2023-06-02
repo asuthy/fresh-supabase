@@ -11,7 +11,7 @@ export const handler: Handlers = {
     const headers = new Headers();
     headers.set("location", "/sign-in-code");
 
-    const email = String(form.get("email"));
+    const email = String(form.get("email Address *"));
 
     const { error } = await supabase.auth
       .signInWithOtp({
