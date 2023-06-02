@@ -1,5 +1,4 @@
-import SignInCodeForm from "islands/SignInForm.tsx";
-import { Modal } from "components/index.ts";
+import { Modal, SignInForm } from "components/index.ts";
 import { state } from "../lib/state.ts";
 
 const onClose = function () {
@@ -23,7 +22,7 @@ export default function SignInDialog() {
             Enter your email address below and we will send you a code to sign
             in with.
           </div>
-          <SignInCodeForm />
+          <SignInForm />
         </Modal>
       </div>
     </>

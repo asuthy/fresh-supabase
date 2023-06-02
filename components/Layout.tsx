@@ -3,8 +3,8 @@ import { ComponentChildren } from "preact";
 
 import { ServerState } from "routes/_middleware.ts";
 import { NavLink } from "components/index.ts";
-import SignInDialog from "../islands/SignInDialog.tsx";
-import SignInButton from "../islands/SignInButton.tsx";
+import SignInDialog from "islands/SignInDialog.tsx";
+import SignInButton from "islands/SignInButton.tsx";
 import IconUserCircle from "https://deno.land/x/tabler_icons_tsx@0.0.3/tsx/user-circle.tsx";
 import { LinkButton } from "components/index.ts";
 

@@ -1,5 +1,4 @@
-import SignInCodeForm from "islands/SignInCodeForm.tsx";
-import { Modal } from "components/index.ts";
+import { Modal, SignInCodeForm } from "components/index.ts";
 
 export default function SignInCodeDialog() {
   return (

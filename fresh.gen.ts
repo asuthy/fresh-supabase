@@ -12,9 +12,7 @@ import * as $5 from "./routes/secret.tsx";
 import * as $6 from "./routes/sign-in-code.tsx";
 import * as $$0 from "./islands/SignInButton.tsx";
 import * as $$1 from "./islands/SignInCodeDialog.tsx";
-import * as $$2 from "./islands/SignInCodeForm.tsx";
-import * as $$3 from "./islands/SignInDialog.tsx";
-import * as $$4 from "./islands/SignInForm.tsx";
+import * as $$2 from "./islands/SignInDialog.tsx";
 
 const manifest = {
   routes: {
@@ -29,9 +27,7 @@ const manifest = {
   islands: {
     "./islands/SignInButton.tsx": $$0,
     "./islands/SignInCodeDialog.tsx": $$1,
-    "./islands/SignInCodeForm.tsx": $$2,
-    "./islands/SignInDialog.tsx": $$3,
-    "./islands/SignInForm.tsx": $$4,
+    "./islands/SignInDialog.tsx": $$2,
   },
   baseUrl: import.meta.url,
   config,

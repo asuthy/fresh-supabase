@@ -1,7 +1,7 @@
 import { useState } from "preact/hooks";
-import { FormButton, InputEmail } from "components/index.ts";
+import { FormButton, InputConfirmationCode } from "components/index.ts";
 
-export default function SignInForm() {
+export function SignInCodeForm() {
   const [valid, setValid] = useState(false);
 
   const onValidChange = function (valid: boolean) {
@@ -11,21 +11,22 @@ export default function SignInForm() {
 
   return (
     <div class="items-stretch min-w-0">
-      <form method="post" class="flex flex-col space-y-4 min-w-0 pt-4">
-        <InputEmail
+      <form method="post" class="flex flex-col space-y-4 min-w-0 pt-10">
+        <InputConfirmationCode
           autofocus
-          type="email"
-          name="email Address *"
+          type="text"
+          name="Confirmation Code"
           onValidChange={onValidChange}
+          disabled={false}
         />
 
         <FormButton
           type="submit"
-          formAction="/api/sign-in"
+          formAction="/api/sign-in-code"
           class="!mt-8"
           disabled={!valid}
         >
-          Send
+          Sign In
         </FormButton>
       </form>
     </div>
