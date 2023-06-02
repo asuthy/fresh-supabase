@@ -21,6 +21,8 @@ export function InputEmail(props: InputEmailProps) {
 
     if (currentTarget.value) {
       isValid = !isEmail(currentTarget.value);
+    } else {
+      isValid = false;
     }
 
     setValid(isValid);
