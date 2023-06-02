@@ -48,8 +48,9 @@ export function Modal(
                       )
                       : <div class="pt-6" />}
                     <div class="text-left pl-6 pr-6 pb-6">
-                      <p class="text-5xl pb-8 text-center">
-                        copy<b>fuse</b>
+                      <p class="text-[60px] pb-2 text-center font-header">
+                        <span className="font-light">copy</span>
+                        <span className="font-bold">fuse</span>
                       </p>
                       <div>
                         {props.children}

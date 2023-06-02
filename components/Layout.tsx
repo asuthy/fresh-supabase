@@ -27,12 +27,13 @@ export function Layout(props: Props) {
       </Head>
 
       <div class="bg-primary shadow-md">
-        <nav class="flex items-center justify-between flex-wrap min-h-[60px] max-w-screen-md mx-auto">
+        <nav class="flex items-center justify-between flex-wrap min-h-[60px] pl-10 pr-10 mx-auto">
           <a href="/">
             <div class="flex flex-shrink-0 border-white">
-              <p class="ml-2 text-white text-3xl">
-                copy<b>fuse</b>
-              </p>
+              <span class="ml-2 text-white font-header text-[30px]">
+                <span className="font-light">copy</span>
+                <span className="font-bold">fuse</span>
+              </span>
             </div>
           </a>
 

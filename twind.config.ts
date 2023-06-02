@@ -4,6 +4,11 @@ import * as colors from "twind/colors";
 export default {
   selfURL: import.meta.url,
   theme: {
+    fontFamily: {
+      header: ["Montserrat, sans-serif"],
+      sans: ["Nunito, sans-serif"],
+      serif: ["Merriweather", "serif"],
+    },
     colors,
     extend: {
       colors: {
@@ -13,18 +18,13 @@ export default {
       },
     },
   },
+
   preflight: (preflight, { theme: _theme }) => ({
     ...preflight,
+    "@import":
+      `url('https://fonts.googleapis.com/css2?family=Nunito,Montserrat,Merriweather,wght@0,300;0,400;0,700;0,900;1,300&display=swap')`,
     div: {
       alignItems: "center",
-    },
-    h1: {
-      fontSize: "1.5rem",
-      fontWeight: "bold",
-    },
-    h2: {
-      fontSize: "1.5rem",
-      fontWeight: "bold",
     },
     p: {
       margin: "8px 0px 8px 0px",
