@@ -6,7 +6,7 @@ export function LinkButton(
   return (
     <a
       {...props}
-      class={`inline-flex items-center gap-x-1.5 rounded-md px-2.5 py-1.5 text-sm font-semibold text-white cursor-pointer ${
+      class={`inline-flex items-center gap-x-1.5 rounded-md px-2.5 py-1.5 text-sm text-white cursor-pointer ${
         props.class ?? ""
       }`}
     />

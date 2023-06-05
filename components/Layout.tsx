@@ -7,6 +7,8 @@ import SignInDialog from "islands/SignInDialog.tsx";
 import SignInButton from "islands/SignInButton.tsx";
 import IconUserCircle from "https://deno.land/x/tabler_icons_tsx@0.0.3/tsx/user-circle.tsx";
 import { LinkButton } from "components/index.ts";
+import SideBar from "../islands/SideBar.tsx";
+import BurgerMenu from "../islands/BurgerMenu.tsx";
 
 type Props = {
   children: ComponentChildren;
@@ -27,10 +29,10 @@ export function Layout(props: Props) {
       </Head>
 
       <div class="bg-primary shadow-md">
-        <nav class="flex items-center justify-between flex-wrap min-h-[60px] pl-10 pr-10 mx-auto">
+        <nav class="flex items-center justify-between flex-wrap min-h-[60px] pl-8 pr-8 mx-auto">
           <a href="/">
             <div class="flex flex-shrink-0 border-white">
-              <span class="ml-2 text-white font-header text-[30px]">
+              <span class="ml-4 text-white font-header text-[30px]">
                 <span className="font-light">copy</span>
                 <span className="font-bold">fuse</span>
               </span>
@@ -56,6 +58,7 @@ export function Layout(props: Props) {
       </div>
 
       <div class="mx-auto max-w-screen-md p-4">
+        <SideBar />
         <SignInDialog />
         {props.children}
       </div>
