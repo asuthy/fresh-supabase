@@ -13,7 +13,7 @@ export default function Secret(props: PageProps<ServerState>) {
   return (
     <Layout state={props.data}>
       <div class="flex flex-col items-center pt-10 text-gray-500">
-        <h3>You've reached the secret page!</h3>
+        <h3>Unseal</h3>
       </div>
     </Layout>
   );

@@ -21,12 +21,18 @@ export async function handler(
   const cookies = getCookies(req.headers);
   const access_token = cookies.auth;
 
-  const protected_route = url.pathname == "/secret";
+  let protectedRoute = false;
+
+  if (
+    url.pathname == "/share" || url.pathname == "/unseal"
+  ) {
+    protectedRoute = true;
+  }
 
   const headers = new Headers();
   headers.set("location", "/");
 
-  if (protected_route && !access_token) {
+  if (protectedRoute && !access_token) {
     // Can't use 403 if we want to redirect to home page.
     return new Response(null, { headers, status: 303 });
   }
@@ -34,7 +40,7 @@ export async function handler(
   if (access_token) {
     const session = await redis.get(access_token) as Session;
 
-    if (protected_route && !session) {
+    if (protectedRoute && !session) {
       return new Response(null, { headers, status: 303 });
     }
 

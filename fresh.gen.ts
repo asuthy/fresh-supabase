@@ -8,8 +8,9 @@ import * as $1 from "./routes/api/sign-in-code.ts";
 import * as $2 from "./routes/api/sign-in.ts";
 import * as $3 from "./routes/api/sign-out.ts";
 import * as $4 from "./routes/index.tsx";
-import * as $5 from "./routes/secret.tsx";
+import * as $5 from "./routes/share.tsx";
 import * as $6 from "./routes/sign-in-code.tsx";
+import * as $7 from "./routes/unseal.tsx";
 import * as $$0 from "./islands/BurgerMenu.tsx";
 import * as $$1 from "./islands/SideBar.tsx";
 import * as $$2 from "./islands/SignInButton.tsx";
@@ -23,8 +24,9 @@ const manifest = {
     "./routes/api/sign-in.ts": $2,
     "./routes/api/sign-out.ts": $3,
     "./routes/index.tsx": $4,
-    "./routes/secret.tsx": $5,
+    "./routes/share.tsx": $5,
     "./routes/sign-in-code.tsx": $6,
+    "./routes/unseal.tsx": $7,
   },
   islands: {
     "./islands/BurgerMenu.tsx": $$0,
