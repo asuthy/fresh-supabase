@@ -12,8 +12,8 @@ export const handler: Handlers = {
 export default function Secret(props: PageProps<ServerState>) {
   return (
     <Layout state={props.data}>
-      <div class="flex flex-col items-center pt-10 text-gray-500">
-        <h3>Unseal</h3>
+      <div class="flex flex-col items-center pt-10 text-gray-500 text-5xl">
+        <h1>Decrypt a document</h1>
       </div>
     </Layout>
   );

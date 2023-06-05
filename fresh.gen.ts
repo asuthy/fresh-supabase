@@ -12,10 +12,11 @@ import * as $5 from "./routes/share.tsx";
 import * as $6 from "./routes/sign-in-code.tsx";
 import * as $7 from "./routes/unseal.tsx";
 import * as $$0 from "./islands/BurgerMenu.tsx";
-import * as $$1 from "./islands/SideBar.tsx";
-import * as $$2 from "./islands/SignInButton.tsx";
-import * as $$3 from "./islands/SignInCodeDialog.tsx";
-import * as $$4 from "./islands/SignInDialog.tsx";
+import * as $$1 from "./islands/EncryptContainer.tsx";
+import * as $$2 from "./islands/SideBar.tsx";
+import * as $$3 from "./islands/SignInButton.tsx";
+import * as $$4 from "./islands/SignInCodeDialog.tsx";
+import * as $$5 from "./islands/SignInDialog.tsx";
 
 const manifest = {
   routes: {
@@ -30,10 +31,11 @@ const manifest = {
   },
   islands: {
     "./islands/BurgerMenu.tsx": $$0,
-    "./islands/SideBar.tsx": $$1,
-    "./islands/SignInButton.tsx": $$2,
-    "./islands/SignInCodeDialog.tsx": $$3,
-    "./islands/SignInDialog.tsx": $$4,
+    "./islands/EncryptContainer.tsx": $$1,
+    "./islands/SideBar.tsx": $$2,
+    "./islands/SignInButton.tsx": $$3,
+    "./islands/SignInCodeDialog.tsx": $$4,
+    "./islands/SignInDialog.tsx": $$5,
   },
   baseUrl: import.meta.url,
   config,
