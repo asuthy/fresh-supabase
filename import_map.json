@@ -13,6 +13,7 @@
     "@upstash/redis": "https://deno.land/x/upstash_redis/mod.ts",
     "std/": "https://deno.land/std@0.160.0/",
     "supabase": "https://esm.sh/@supabase/supabase-js@2.1.0",
+    "@emsifa/validasaur": "https://deno.land/x/validasaur@v0.15.0/mod.ts",
 
     "components/": "./components/",
     "islands/": "./islands/",
