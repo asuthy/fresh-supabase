@@ -7,10 +7,11 @@ import * as $0 from "./routes/_middleware.ts";
 import * as $1 from "./routes/api/sign-in-code.ts";
 import * as $2 from "./routes/api/sign-in.ts";
 import * as $3 from "./routes/api/sign-out.ts";
-import * as $4 from "./routes/index.tsx";
-import * as $5 from "./routes/share.tsx";
-import * as $6 from "./routes/sign-in-code.tsx";
-import * as $7 from "./routes/unseal.tsx";
+import * as $4 from "./routes/api/v1/store.ts";
+import * as $5 from "./routes/index.tsx";
+import * as $6 from "./routes/share.tsx";
+import * as $7 from "./routes/sign-in-code.tsx";
+import * as $8 from "./routes/unseal.tsx";
 import * as $$0 from "./islands/BurgerMenu.tsx";
 import * as $$1 from "./islands/EncryptContainer.tsx";
 import * as $$2 from "./islands/SideBar.tsx";
@@ -24,10 +25,11 @@ const manifest = {
     "./routes/api/sign-in-code.ts": $1,
     "./routes/api/sign-in.ts": $2,
     "./routes/api/sign-out.ts": $3,
-    "./routes/index.tsx": $4,
-    "./routes/share.tsx": $5,
-    "./routes/sign-in-code.tsx": $6,
-    "./routes/unseal.tsx": $7,
+    "./routes/api/v1/store.ts": $4,
+    "./routes/index.tsx": $5,
+    "./routes/share.tsx": $6,
+    "./routes/sign-in-code.tsx": $7,
+    "./routes/unseal.tsx": $8,
   },
   islands: {
     "./islands/BurgerMenu.tsx": $$0,

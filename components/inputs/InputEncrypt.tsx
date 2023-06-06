@@ -3,13 +3,16 @@ import { useState } from "preact/hooks";
 import { Input } from "./Input.tsx";
 
 type OnValidChangeFunctionType = (valid: boolean) => boolean;
+type OnInputChangeFunctionType = (
+  value: string | undefined,
+) => string | undefined;
 
-interface InputConfirmationCodeProps
-  extends JSX.HTMLAttributes<HTMLInputElement> {
+interface InputEncryptProps extends JSX.HTMLAttributes<HTMLInputElement> {
   onValidChange: OnValidChangeFunctionType;
+  onInputChange: OnInputChangeFunctionType;
 }
 
-export function InputEncrypt(props: InputConfirmationCodeProps) {
+export function InputEncrypt(props: InputEncryptProps) {
   const [valid, setValid] = useState(true);
   const name = props.name || "";
   const displayName = name.charAt(0).toLocaleUpperCase() + name.slice(1);
@@ -23,6 +26,10 @@ export function InputEncrypt(props: InputConfirmationCodeProps) {
       isValid = currentTarget.value.length > 0;
     } else {
       isValid = false;
+    }
+
+    if (props.onInputChange) {
+      props.onInputChange(currentTarget.value);
     }
 
     setValid(isValid);
