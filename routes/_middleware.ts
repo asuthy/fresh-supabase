@@ -24,7 +24,7 @@ export async function handler(
   let protectedRoute = false;
 
   if (
-    url.pathname == "/share" || url.pathname == "/unseal"
+    url.pathname == "/share"
   ) {
     protectedRoute = true;
   }

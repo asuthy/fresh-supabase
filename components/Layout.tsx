@@ -42,14 +42,12 @@ export function Layout(props: Props) {
               </a>
 
               <div class="flex flex-grow border-gray pt-1">
-                {isAllowed
-                  ? (
-                    <div class="flex flex-grow justify-end">
-                      <NavLink href="/share">Share</NavLink>
-                      <NavLink href="/unseal">Unseal</NavLink>
-                    </div>
-                  )
-                  : <div class="flex flex-grow justify-end"></div>}
+                <div class="flex flex-grow justify-end">
+                  {isAllowed
+                    ? <NavLink href="/share">Share</NavLink>
+                    : <div class="flex flex-grow justify-end"></div>}
+                  <NavLink href="/unseal">Unseal</NavLink>
+                </div>
                 <div class="flex sm:flex-shrink-0">
                   {!isAllowed
                     ? <SignInButton text={buttProps.text} />
