@@ -49,61 +49,78 @@ export function EncryptForm() {
     <div class="items-stretch min-w-0">
       {!link
         ? (
-          <form
-            method="post"
-            class="flex flex-col space-y-4 min-w-0 pt-10"
-            onSubmit={(e) => {
-              e.preventDefault();
+          <div>
+            <div class="text-gray-400 text-4xl items-center justify-center">
+              <h1 class="font-header font-semibold w-full text-center">
+                Encrypt and Share
+              </h1>
+            </div>
+            <form
+              method="post"
+              class="flex flex-col space-y-4 min-w-0 pt-10"
+              onSubmit={(e) => {
+                e.preventDefault();
 
-              onSubmit();
-            }}
-          >
-            <InputEncrypt
-              autofocus
-              type="text"
-              name="Value"
-              onValidChange={onValidChange}
-              disabled={false}
-              onInputChange={(
-                value: string | undefined,
-              ) => {
-                if (value) {
-                  setText(value);
-                  return;
-                }
-
-                return value;
+                onSubmit();
               }}
-            />
-
-            <FormButton
-              type="submit"
-              formAction="/api/encrypt"
-              class="!mt-8"
-              disabled={!valid}
             >
-              Share
-            </FormButton>
-          </form>
+              <InputEncrypt
+                autofocus
+                type="text"
+                name="Value"
+                onValidChange={onValidChange}
+                disabled={false}
+                onInputChange={(
+                  value: string | undefined,
+                ) => {
+                  if (value) {
+                    setText(value);
+                    return;
+                  }
+
+                  return value;
+                }}
+              />
+
+              <FormButton
+                type="submit"
+                formAction="/api/encrypt"
+                class="!mt-8"
+                disabled={!valid}
+              >
+                Share
+              </FormButton>
+            </form>
+          </div>
         )
         : (
           <div className="flex flex-col items-center justify-center w-full h-full pt-10">
-            <div className="relative flex items-stretch flex-grow focus-within:z-10">
-              <pre className="px-4 py-3 font-mono text-center bg-transparent border rounded border-zinc-600 focus:border-zinc-100/80 focus:ring-0 sm:text-sm text-zinc-100">
+            <div class="text-gray-400 text-4xl items-center justify-center">
+              <h1 class="font-header font-semibold w-full text-center">
+                Share this link with others
+              </h1>
+            </div>
+            <div className="relative flex items-stretch flex-grow focus-within:z-10 pt-10">
+              <pre className="px-4 py-3 font-mono text-center bg-transparent border rounded border-gray-700 focus:ring-0 sm:text-sm text-white">
               {link}
               </pre>
               <button
                 type="button"
-                className="relative inline-flex items-center px-4 py-2 -ml-px space-x-2 text-sm font-medium duration-150 border text-zinc-700 border-zinc-300 rounded-r-md bg-zinc-50 hover focus:border-zinc-500 focus:outline-none focus:ring-1 focus:ring-zinc-500 hover:text-zinc-900 hover:bg-white"
+                className="relative inline-flex items-center px-4 py-2 -ml-px space-x-2 text-sm font-medium duration-150 border text-black border-gray-700 rounded-r-md bg-white hover focus:border-zinc-500 focus:outline-none focus:ring-1 focus:ring-zinc-500 hover:text-zinc-900 hover:bg-white"
                 onClick={() => {
                   navigator.clipboard.writeText(link);
                   setCopied(true);
                 }}
               >
                 {copied
-                  ? <IconClipboard className="w-5 h-5" aria-hidden="true" />
-                  : (
+                  ? (
                     <IconClipboardCheck
+                      className="w-5 h-5"
+                      aria-hidden="true"
+                    />
+                  )
+                  : (
+                    <IconClipboard
                       className="w-5 h-5"
                       aria-hidden="true"
                     />

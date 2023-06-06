@@ -13,11 +13,16 @@ export const handler: Handlers = {
 export default function Unseal(props: PageProps<ServerState>) {
   return (
     <Layout state={props.data}>
-      <div class="flex flex-col items-center pt-10 text-gray-500 text-4xl">
-        <h1 class="font-header font-semibold">Decrypt a document</h1>
+      <div class="h-full items-center justify-center">
+        <div class="w-[800px]">
+          <div class="text-gray-400 text-4xl items-center justify-center">
+            <h1 class="font-header font-semibold w-full text-center">
+              Decrypt a document
+            </h1>
+          </div>
+          <DecryptContainer />
+        </div>
       </div>
-
-      <DecryptContainer />
     </Layout>
   );
 }

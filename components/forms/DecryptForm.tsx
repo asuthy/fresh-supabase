@@ -88,9 +88,9 @@ export function DecryptForm() {
             <div>
               <InputEncrypt
                 type="text"
-                name="Composite Key"
+                name="ID"
                 id="compositeKey"
-                className="w-full p-0 text-base bg-transparent border-0 appearance-none text-zinc-100 placeholder-zinc-500 focus:ring-0 sm:text-sm"
+                class="w-full text-base bg-transparent border-0 appearance-none focus:ring-0 sm:text-sm !text-white"
                 value={compositeKey}
                 onValidChange={onValidChange}
                 disabled={false}
@@ -110,30 +110,39 @@ export function DecryptForm() {
             <FormButton
               type="submit"
               disabled={!valid}
+              class="!mt-8"
             >
               Unseal
             </FormButton>
           </form>
         )
         : (
-          <div>
-            <pre className="flex overflow-x-auto pt-10">
-            <code className="px-4 text-left">{text}</code>
+          <div class="pt-10">
+            <pre className="px-4 py-3 font-mono text-center bg-transparent border rounded border-gray-700 focus:ring-0 sm:text-sm text-white">
+              {text}
             </pre>
 
-            <button
-              type="button"
-              className="relative inline-flex items-center px-4 py-2 -ml-px space-x-2 text-sm font-medium duration-150 border rounded text-zinc-700 border-zinc-300 bg-zinc-50 hover focus:border-zinc-500 focus:outline-none hover:text-zinc-50 hover:bg-zinc-900"
-              onClick={() => {
-                navigator.clipboard.writeText(text);
-                setCopied(true);
-              }}
-            >
-              {copied
-                ? <IconClipboardCheck className="w-5 h-5" aria-hidden="true" />
-                : <IconClipboard className="w-5 h-5" aria-hidden="true" />}{" "}
-              <span>{copied ? "Copied" : "Copy"}</span>
-            </button>
+            <div className="flex items-center justify-end gap-4 mt-4">
+              <button
+                type="button"
+                className="relative inline-flex items-center focus:outline-none cursor-pointer px-4 py-2 rounded border-1 hover:border-gray-700 !text-black bg-white text-center font-bold hover:bg-gray-900 hover:!text-white duration-200"
+                onClick={() => {
+                  navigator.clipboard.writeText(text);
+                  setCopied(true);
+                }}
+              >
+                {copied
+                  ? (
+                    <IconClipboardCheck
+                      className="w-5 h-5"
+                      aria-hidden="true"
+                    />
+                  )
+                  : <IconClipboard className="w-5 h-5" aria-hidden="true" />}
+                {" "}
+                <span>{copied ? "Copied" : "Copy"}</span>
+              </button>
+            </div>
           </div>
         )}
     </div>

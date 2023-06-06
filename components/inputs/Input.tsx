@@ -19,7 +19,7 @@ export function Input(props: InputProps) {
     <label
       for={props.name}
       class={`flex flex-col flex-grow mb-1 text-sm ${
-        props.valid ? "text-gray-500" : "text-red-500"
+        props.valid ? "text-gray-500" : "text-red-400"
       }`}
     >
       {displayName}
@@ -28,9 +28,9 @@ export function Input(props: InputProps) {
         disabled={!IS_BROWSER || props.disabled}
         onInput={props.onInput}
         value={props.value}
-        class={`px-3 py-2 rounded focus:outline-none disabled:(opacity-50 cursor-not-allowed) text-gray-500 ${
+        class={`px-3 py-3 rounded focus:outline-none disabled:(opacity-50 cursor-not-allowed) text-gray-500 bg-black ${
           props.class ?? ""
-        } ${props.valid ? "border(gray-300 1)" : "border(red-300 1)"}`}
+        } ${props.valid ? "border(gray-700 1)" : "border(red-900 1)"}`}
       />
     </label>
   );

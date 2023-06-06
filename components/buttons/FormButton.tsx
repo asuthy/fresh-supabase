@@ -14,7 +14,7 @@ export function FormButton(props: JSX.HTMLAttributes<HTMLButtonElement>) {
       {...props}
       disabled={!IS_BROWSER || props.disabled || disabled}
       onClick={buttonClick}
-      class={`flex-grow focus:outline-none inline-block cursor-pointer px-4 py-2 rounded disabled:(opacity-50 cursor-not-allowed) bg-primary border-primary text-white hover:bg-primaryStrong hover:border-primaryStrong ${
+      class={`flex-grow focus:outline-none inline-block cursor-pointer px-4 py-2 rounded border-1 hover:border-gray-700 !text-black bg-white text-center font-bold hover:bg-gray-900 hover:!text-white duration-200 ${
         props.class ?? ""
       }`}
     />

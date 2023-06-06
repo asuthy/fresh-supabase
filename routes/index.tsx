@@ -13,7 +13,7 @@ export default function Home(props: PageProps<ServerState>) {
   const isAllowed = !!props.data.user;
   return (
     <Layout state={props.data}>
-      <div class="flex items-center justify-center h-screen">
+      <div class="flex items-center justify-center h-full">
         <div class="">
           <p class="pb-2 text-gray-400 text-center text-6xl font-header font-semibold">
             Share Environment
@@ -29,10 +29,7 @@ export default function Home(props: PageProps<ServerState>) {
           {isAllowed
             ? (
               <div class="flex flex-col items-center justify-center">
-                <NavButton
-                  href="/share"
-                  class="text-gray-500 bg-primaryLight w-60 text-center"
-                >
+                <NavButton href="/share">
                   Share
                 </NavButton>
               </div>
