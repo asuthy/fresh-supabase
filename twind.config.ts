@@ -12,9 +12,9 @@ export default {
     colors,
     extend: {
       colors: {
-        primary: "#f43f5f",
-        primaryStrong: "#f43f5f",
-        primaryLight: "#f43f5f",
+        primary: "#000000",
+        primaryStrong: "#222222",
+        primaryLight: "#333333",
       },
     },
   },
@@ -22,7 +22,7 @@ export default {
   preflight: (preflight, { theme: _theme }) => ({
     ...preflight,
     "@import":
-      `url('https://fonts.googleapis.com/css2?family=Nunito,Montserrat,Merriweather,wght@0,300;0,400;0,700;0,900;1,300&display=swap')`,
+      `url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700;900&family=Merriweather:wght@300;400;700;900&family=Montserrat:wght@300;400;700;900&display=swap')`,
     div: {
       alignItems: "center",
     },

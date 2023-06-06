@@ -36,7 +36,7 @@ export function Modal(
 
               <div class="fixed inset-0 z-10 overflow-y-auto">
                 <div class="flex min-h-full items-end justify-center text-center sm:items-center sm:p-0">
-                  <div class="relative transform overflow-hidden rounded-lg bg-white text-right shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-sm">
+                  <div class="relative transform overflow-hidden rounded-lg bg-black text-right shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-sm">
                     {props.allowClose
                       ? (
                         <LinkButton
@@ -48,9 +48,9 @@ export function Modal(
                       )
                       : <div class="pt-6" />}
                     <div class="text-left pl-6 pr-6 pb-6">
-                      <p class="text-[60px] pb-2 text-center font-header">
+                      <p class="text-[60px] pb-2 text-center font-header text-white">
                         <span className="font-light">copy</span>
-                        <span className="font-bold">fuse</span>
+                        <span className="font-bold">share</span>
                       </p>
                       <div>
                         {props.children}

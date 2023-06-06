@@ -2,6 +2,7 @@ import { Handlers, PageProps } from "$fresh/server.ts";
 
 import { ServerState } from "routes/_middleware.ts";
 import { Layout } from "components/index.ts";
+import EncryptContainer from "islands/EncryptContainer.tsx";
 
 export const handler: Handlers = {
   GET(_req, ctx) {
@@ -12,8 +13,10 @@ export const handler: Handlers = {
 export default function Secret(props: PageProps<ServerState>) {
   return (
     <Layout state={props.data}>
-      <div class="flex flex-col items-center pt-10 text-gray-500">
-        <h3>You've reached the secret page!</h3>
+      <div class="h-full items-center justify-center">
+        <div class="w-[800px]">
+          <EncryptContainer />
+        </div>
       </div>
     </Layout>
   );

@@ -18,6 +18,8 @@
     "components/": "./components/",
     "islands/": "./islands/",
     "lib/": "./lib/",
-    "routes/": "./routes/"
+    "routes/": "./routes/",
+    "pkg/": "./pkg/",
+    "util/": "./util/"
   }
 }
