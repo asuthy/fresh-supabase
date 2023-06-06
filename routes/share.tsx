@@ -13,8 +13,8 @@ export const handler: Handlers = {
 export default function Secret(props: PageProps<ServerState>) {
   return (
     <Layout state={props.data}>
-      <div class="flex flex-col items-center pt-10 text-gray-500 text-5xl">
-        <h1>Encrypt and Share</h1>
+      <div class="flex flex-col items-center pt-10 text-gray-500 text-4xl">
+        <h1 class="font-header font-semibold">Encrypt and Share</h1>
       </div>
       <div>
         <EncryptContainer />

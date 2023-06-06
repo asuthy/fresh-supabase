@@ -42,7 +42,6 @@ export function EncryptForm() {
     url.pathname = "/unseal";
     url.hash = compositeKey;
 
-    console.log(url.toString());
     setLink(url.toString());
   };
 

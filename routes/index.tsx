@@ -15,10 +15,10 @@ export default function Home(props: PageProps<ServerState>) {
     <Layout state={props.data}>
       <div class="flex items-center justify-center h-screen">
         <div class="">
-          <p class="pb-2 text-gray-400 text-center text-7xl">
+          <p class="pb-2 text-gray-400 text-center text-6xl font-header font-semibold">
             Share Environment
           </p>
-          <p class="pb-6 text-gray-500 text-center text-7xl">
+          <p class="pb-6 text-gray-500 text-center text-6xl font-header font-semibold">
             Variables Securely
           </p>
           <p class="pt-2 pb-4 text-gray-500 text-center">

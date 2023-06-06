@@ -13,3 +13,4 @@ export { SignInForm } from "components/forms/SignInForm.tsx";
 export { SignInCodeForm } from "components/forms/SignInCodeForm.tsx";
 export { InputConfirmationCode } from "components/inputs/InputConfirmationCode.tsx";
 export { EncryptForm } from "components/forms/EncryptForm.tsx";
+export { DecryptForm } from "components/forms/DecryptForm.tsx";

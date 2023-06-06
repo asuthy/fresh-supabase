@@ -25,7 +25,7 @@ export function Layout(props: Props) {
   return (
     <>
       <Head>
-        <title>copyfuse</title>
+        <title>copyshare</title>
       </Head>
 
       <div class="bg-primary shadow-md">
@@ -34,7 +34,7 @@ export function Layout(props: Props) {
             <div class="flex flex-shrink-0 border-white">
               <span class="ml-4 text-white font-header text-[30px]">
                 <span className="font-light">copy</span>
-                <span className="font-bold">fuse</span>
+                <span className="font-bold">share</span>
               </span>
             </div>
           </a>
@@ -60,12 +60,14 @@ export function Layout(props: Props) {
             </div>
           </div>
         </nav>
-      </div>
-
-      <div class="mx-auto max-w-screen-md p-4">
-        <SideBar />
-        <SignInDialog />
-        {props.children}
+        <div class="p-4 bg-primary">
+          <div class="mx-auto max-w-screen-md">
+            <SideBar />
+            <SignInDialog />
+            {props.children}
+            <p class="text-white">Footer</p>
+          </div>
+        </div>
       </div>
     </>
   );

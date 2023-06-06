@@ -4,6 +4,7 @@ import { IS_BROWSER } from "$fresh/runtime.ts";
 interface InputProps {
   name: string | undefined;
   displayName: string | undefined;
+  value: string | number | string[] | undefined;
   valid: boolean | undefined;
   disabled: boolean | undefined;
   class: string | undefined;
@@ -26,6 +27,7 @@ export function Input(props: InputProps) {
         {...props}
         disabled={!IS_BROWSER || props.disabled}
         onInput={props.onInput}
+        value={props.value}
         class={`px-3 py-2 rounded focus:outline-none disabled:(opacity-50 cursor-not-allowed) text-gray-500 ${
           props.class ?? ""
         } ${props.valid ? "border(gray-300 1)" : "border(red-300 1)"}`}

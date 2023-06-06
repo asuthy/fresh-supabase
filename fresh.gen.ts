@@ -7,17 +7,19 @@ import * as $0 from "./routes/_middleware.ts";
 import * as $1 from "./routes/api/sign-in-code.ts";
 import * as $2 from "./routes/api/sign-in.ts";
 import * as $3 from "./routes/api/sign-out.ts";
-import * as $4 from "./routes/api/v1/store.ts";
-import * as $5 from "./routes/index.tsx";
-import * as $6 from "./routes/share.tsx";
-import * as $7 from "./routes/sign-in-code.tsx";
-import * as $8 from "./routes/unseal.tsx";
+import * as $4 from "./routes/api/v1/load.ts";
+import * as $5 from "./routes/api/v1/store.ts";
+import * as $6 from "./routes/index.tsx";
+import * as $7 from "./routes/share.tsx";
+import * as $8 from "./routes/sign-in-code.tsx";
+import * as $9 from "./routes/unseal.tsx";
 import * as $$0 from "./islands/BurgerMenu.tsx";
-import * as $$1 from "./islands/EncryptContainer.tsx";
-import * as $$2 from "./islands/SideBar.tsx";
-import * as $$3 from "./islands/SignInButton.tsx";
-import * as $$4 from "./islands/SignInCodeDialog.tsx";
-import * as $$5 from "./islands/SignInDialog.tsx";
+import * as $$1 from "./islands/DecryptContainer.tsx";
+import * as $$2 from "./islands/EncryptContainer.tsx";
+import * as $$3 from "./islands/SideBar.tsx";
+import * as $$4 from "./islands/SignInButton.tsx";
+import * as $$5 from "./islands/SignInCodeDialog.tsx";
+import * as $$6 from "./islands/SignInDialog.tsx";
 
 const manifest = {
   routes: {
@@ -25,19 +27,21 @@ const manifest = {
     "./routes/api/sign-in-code.ts": $1,
     "./routes/api/sign-in.ts": $2,
     "./routes/api/sign-out.ts": $3,
-    "./routes/api/v1/store.ts": $4,
-    "./routes/index.tsx": $5,
-    "./routes/share.tsx": $6,
-    "./routes/sign-in-code.tsx": $7,
-    "./routes/unseal.tsx": $8,
+    "./routes/api/v1/load.ts": $4,
+    "./routes/api/v1/store.ts": $5,
+    "./routes/index.tsx": $6,
+    "./routes/share.tsx": $7,
+    "./routes/sign-in-code.tsx": $8,
+    "./routes/unseal.tsx": $9,
   },
   islands: {
     "./islands/BurgerMenu.tsx": $$0,
-    "./islands/EncryptContainer.tsx": $$1,
-    "./islands/SideBar.tsx": $$2,
-    "./islands/SignInButton.tsx": $$3,
-    "./islands/SignInCodeDialog.tsx": $$4,
-    "./islands/SignInDialog.tsx": $$5,
+    "./islands/DecryptContainer.tsx": $$1,
+    "./islands/EncryptContainer.tsx": $$2,
+    "./islands/SideBar.tsx": $$3,
+    "./islands/SignInButton.tsx": $$4,
+    "./islands/SignInCodeDialog.tsx": $$5,
+    "./islands/SignInDialog.tsx": $$6,
   },
   baseUrl: import.meta.url,
   config,

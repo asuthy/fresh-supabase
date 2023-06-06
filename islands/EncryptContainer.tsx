@@ -1,6 +1,6 @@
 import { EncryptForm } from "components/index.ts";
 
-export default function SignInDialog() {
+export default function EncryptContainer() {
   return (
     <>
       <div>

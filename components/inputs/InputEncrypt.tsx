@@ -44,6 +44,7 @@ export function InputEncrypt(props: InputEncryptProps) {
       valid={valid}
       class={props.class}
       onInput={onInput}
+      value={props.value}
     />
   );
 }
